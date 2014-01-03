@@ -1,4 +1,4 @@
-package main
+package nvml
 
 // #cgo LDFLAGS: -lnvidia-ml
 // #cgo CFLAGS: -I/home/abduld/usr/nvml/include -L/home/abduld/usr/nvml/lib64
@@ -275,5 +275,5 @@ func DeviceFanSpeed(dh DeviceHandle) (uint, error) {
 }
 
 func main() {
-    Init()
+	Init()
 }
