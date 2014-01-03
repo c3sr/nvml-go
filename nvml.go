@@ -1,15 +1,10 @@
-package nvml
+package main
 
-/*
-
-#cgo LDFLAGS: -lnvidia-ml
-#cgo CFLAGS: -I/home/abduld/usr/nvml/include -L/home/abduld/usr/nvml/lib64
-#include <nvml.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-*/
-
+// #cgo LDFLAGS: -lnvidia-ml
+// #cgo CFLAGS: -I/home/abduld/usr/nvml/include -L/home/abduld/usr/nvml/lib64
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <nvml.h>
 import "C"
 
 import (
@@ -277,4 +272,8 @@ func DeviceFanSpeed(dh DeviceHandle) (uint, error) {
 	var speed C.uint
 	r := NewResult(C.nvmlDeviceGetFanSpeed(dh.handle, &speed))
 	return uint(speed), r
+}
+
+func main() {
+    Init()
 }
