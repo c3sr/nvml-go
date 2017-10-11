@@ -1,7 +1,7 @@
 package nvml
 
 // #cgo LDFLAGS: -lnvidia-ml
-// #cgo CFLAGS: -I/home/abduld/usr/nvml/include -L/home/abduld/usr/nvml/lib64
+// #cgo CFLAGS:  -I/usr/local/cuda/include
 // #include <stdio.h>
 // #include <stdlib.h>
 // #include <nvml.h>
