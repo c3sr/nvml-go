@@ -4,6 +4,7 @@ package nvml
 // #cgo linux LDFLAGS: -L /usr/lib/powerpc64le-linux-gnu -L /usr/lib/x86_64-linux-gnu/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-384/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-387/
+// #cgo linux LDFLAGS: -L /usr/lib/nvidia-390/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-396/
 // #cgo CFLAGS:  -I/usr/local/cuda/include
 // #include <stdio.h>
@@ -209,8 +210,30 @@ func makeStringBuffer(sz int) *C.char {
 func DeviceName(dh DeviceHandle) (string, error) {
 	var name *C.char = makeStringBuffer(STRING_BUFFER_SIZE)
 	defer C.free(unsafe.Pointer(name))
-	r := NewResult(C.nvmlDeviceGetName(dh.handle, name, C.uint(STRING_BUFFER_SIZE)))
-	return C.GoStringN(name, STRING_BUFFER_SIZE), r
+	if result := C.nvmlDeviceGetName(dh.handle, name, C.uint(STRING_BUFFER_SIZE)); result != C.NVML_SUCCESS {
+		return "", NewResult(result)
+	}
+	return C.GoStringN(name, STRING_BUFFER_SIZE), nil
+}
+
+type Utilization struct {
+	GPU    int
+	Memory int
+}
+
+func GetUtilization(dh DeviceHandle) (utilization Utilization, err error) {
+	var utilRates C.nvmlUtilization_t
+	if result := C.nvmlDeviceGetUtilizationRates(dh.handle, &utilRates); result != C.NVML_SUCCESS {
+		err = NewResult(result)
+		return
+	}
+	gpu := int(utilRates.gpu)
+	memory := int(utilRates.memory)
+	utilization = Utilization{
+		GPU:    gpu,
+		Memory: memory,
+	}
+	return
 }
 
 type MemoryInformation struct {
