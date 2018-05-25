@@ -1,7 +1,10 @@
 package nvml
 
 // #cgo LDFLAGS: -lnvidia-ml
-// #cgo linux LDFLAGS: -L /usr/lib/nvidia-384/ -L /usr/lib/x86_64-linux-gnu/
+// #cgo linux LDFLAGS: -L /usr/lib/powerpc64le-linux-gnu -L /usr/lib/x86_64-linux-gnu/
+// #cgo linux LDFLAGS: -L /usr/lib/nvidia-384/
+// #cgo linux LDFLAGS: -L /usr/lib/nvidia-387/
+// #cgo linux LDFLAGS: -L /usr/lib/nvidia-396/
 // #cgo CFLAGS:  -I/usr/local/cuda/include
 // #include <stdio.h>
 // #include <stdlib.h>
