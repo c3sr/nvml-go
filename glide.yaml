@@ -1,4 +1,4 @@
-package: github.com/rai-project/go-cupti
+package: github.com/rai-project/go-nvml
 import:
 - package: github.com/GeertJohan/go-sourcepath
 - package: github.com/Unknwon/com
