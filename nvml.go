@@ -8,7 +8,7 @@ package nvml
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-387/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-390/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-396/
-// #cgo CFLAGS:  -I/usr/local/cuda/include
+// #cgo CFLAGS:  -I/usr/local/cuda/include -I/usr/local/cuda-9.2/include
 // #include <stdio.h>
 // #include <stdlib.h>
 // #include <nvml.h>
