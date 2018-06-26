@@ -59,6 +59,9 @@ install:
   - rm -fr vendor/github.com/Sirupsen
   - find vendor -type f -exec sed -i 's/Sirupsen/sirupsen/g' {} +
   - echo $LD_LIBRARY_PATH
+  - ls -l /usr/local/cuda-9.2/lib64
+  - ls -l /usr/local/cuda-9.2/lib64/stubs
+  - ls -l /usr/local/cuda/lib64
   - go build
 script:
   - echo "Skip tests..."
