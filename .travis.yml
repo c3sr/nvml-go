@@ -37,7 +37,6 @@ addons:
     - cuda-drivers-9-2
     - cuda-cudart-dev-9-2
     - cuda-libraries-dev-9-2
-    - cuda-command-line-tools-9-2
     - cuda-cublas-dev-9-2
     - libcudnn7
     - libcudnn7-dev
