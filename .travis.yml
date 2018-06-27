@@ -10,6 +10,7 @@ sudo: required
 addons:
   apt:
     sources:
+    - sourceline: 'ppa:ubuntu-toolchain-r/test'
     - sourceline: ppa:masterminds/glide
     - sourceline: deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64
         /
