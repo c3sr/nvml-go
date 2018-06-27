@@ -33,13 +33,13 @@ addons:
     - libpci-dev
     - libhwloc-dev
     - libnuma-dev
-    - libnccl2
-    - cuda-drivers-9-2
+    #- libnccl2
+    - cuda-drivers
     - cuda-cudart-dev-9-2
     - cuda-libraries-dev-9-2
     - cuda-cublas-dev-9-2
-    - libcudnn7
-    - libcudnn7-dev
+    #- libcudnn7
+    #- libcudnn7-dev
 env:
   global:
   - CXX_COMPILER=g++-6
