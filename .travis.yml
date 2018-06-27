@@ -37,9 +37,9 @@ addons:
     - libcuda1-396
     #- libnccl2
     #- cuda-drivers
-    - cuda-cudart-dev-9-2
-    - cuda-libraries-dev-9-2
-    - cuda-cublas-dev-9-2
+    - cuda-cudart-dev-9-1
+    - cuda-libraries-dev-9-1
+    - cuda-cublas-dev-9-1
     #- libcudnn7
     #- libcudnn7-dev
 env:
