@@ -35,7 +35,7 @@ addons:
     - libhwloc-dev
     - libnuma-dev
     #- libnccl2
-    - cuda-drivers
+    - cuda-driver-dev-9-1
     - cuda-cudart-dev-9-1
     - cuda-libraries-dev-9-1
     - cuda-cublas-dev-9-1
