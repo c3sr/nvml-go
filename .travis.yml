@@ -34,6 +34,7 @@ addons:
     - libpci-dev
     - libhwloc-dev
     - libnuma-dev
+    - libcuda1-396
     #- libnccl2
     - cuda-drivers
     - cuda-cudart-dev-9-2
