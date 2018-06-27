@@ -6,7 +6,7 @@ matrix:
   allow_failures:
     - go: tip
 dist: trusty
-sudo: required
+sudo: false
 addons:
   apt:
     sources:
@@ -57,8 +57,8 @@ install:
   - rm -fr vendor/github.com/Sirupsen
   - find vendor -type f -exec sed -i 's/Sirupsen/sirupsen/g' {} +
   - echo $LD_LIBRARY_PATH
-  - ls -l /usr/local/cuda-9.2/lib64
-  - ls -l /usr/local/cuda-9.2/lib64/stubs
+  - ls -l /usr/local/cuda-9.1/lib64
+  - ls -l /usr/local/cuda-9.1/lib64/stubs
   - ls -l /usr/lib
   - sudo find / -name libnvidia-ml.*
   - ls -l /usr
