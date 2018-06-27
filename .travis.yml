@@ -6,7 +6,7 @@ matrix:
   allow_failures:
     - go: tip
 dist: trusty
-sudo: false
+sudo: true
 addons:
   apt:
     sources:
@@ -62,6 +62,7 @@ install:
   - ls -l /usr/local/cuda-9.2/lib64
   - ls -l /usr/local/cuda-9.2/lib64/stubs
   - ls -l /usr/lib
+  - sudo find / -name libnvidia-ml.so
   - go build
 script:
   - echo "Skip tests..."
