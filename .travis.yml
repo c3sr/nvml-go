@@ -11,10 +11,10 @@ addons:
   apt:
     sources:
     - sourceline: ppa:masterminds/glide
-    - sourceline: deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64
+    - sourceline: deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64
         /
-      key_url: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-    - sourceline: deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64
+      key_url: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/7fa2af80.pub
+    - sourceline: deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64
         /
     - ubuntu-toolchain-r-test
     packages:
@@ -63,7 +63,7 @@ install:
   - ls -l /usr/local/cuda-9.2/lib64/stubs
   - ls -l /usr/lib
   - sudo find / -name libnvidia-ml.*
-  - sudo find / -name libnvidia-ml.so
+  - ls -l /usr
   - go build
 script:
   - echo "Skip tests..."
