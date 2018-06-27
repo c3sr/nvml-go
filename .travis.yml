@@ -10,14 +10,13 @@ sudo: required
 addons:
   apt:
     sources:
-    - sourceline: 'ppa:ubuntu-toolchain-r/test'
+    - sourceline: ppa:ubuntu-toolchain-r/test
     - sourceline: ppa:masterminds/glide
     - sourceline: deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64
         /
       key_url: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
     - sourceline: deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64
         /
-    - ubuntu-toolchain-r-test
     packages:
     - glide
     - gcc-6
