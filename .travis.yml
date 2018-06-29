@@ -54,6 +54,7 @@ install:
   - rm -fr vendor/github.com/Sirupsen
   - find vendor -type f -exec sed -i 's/Sirupsen/sirupsen/g' {} +
   - sudo find / -name libnvidia-ml.*
+  - sudo find / -name host_defines.h
   - go build
 script:
   - echo "Skip tests..."
