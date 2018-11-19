@@ -56,7 +56,7 @@ func (c ComputeMode) String() string {
 	case 3:
 		return "ExclusiveProcess"
 	}
-	return fmt.Sprint("UnknownComputeMode %d", c)
+	return fmt.Sprint("UnknownComputeMode %v", c)
 }
 
 func (e ECCBitType) String() string {
@@ -84,7 +84,7 @@ func (c ClockType) String() string {
 	case 2:
 		return "Memory"
 	}
-	return fmt.Sprint("UnknownClockType %d", c)
+	return fmt.Sprint("UnknownClockType %v", c)
 }
 
 func (d DriverModel) String() string {
@@ -101,7 +101,7 @@ func (p PState) String() string {
 	} else if p == 32 {
 		return "Unknown"
 	}
-	return fmt.Sprint("UnknownPState %d", p)
+	return fmt.Sprint("UnknownPState %v", p)
 }
 
 func (i InformObject) String() string {
@@ -113,7 +113,7 @@ func (i InformObject) String() string {
 	case 2:
 		return "Power"
 	}
-	return fmt.Sprint("UnknownInformObject %d", i)
+	return fmt.Sprint("UnknownInformObject %v", i)
 }
 
 func (r Result) String() string {
@@ -143,7 +143,7 @@ func (r Result) String() string {
 	case 99:
 		return "Unknown"
 	}
-	return fmt.Sprint("UnknownError %d", r)
+	return fmt.Sprint("UnknownError %v", r)
 }
 
 func (r Result) Error() string {
