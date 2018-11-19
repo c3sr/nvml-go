@@ -52,6 +52,7 @@ before_install:
 install:
   - dep ensure
   - go build
+  - go build -tags nogpu
 script:
   - echo "Skip tests..."
 after_script:
