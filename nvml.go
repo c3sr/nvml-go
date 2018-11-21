@@ -9,10 +9,12 @@ package nvml
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-390/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-396/
 // #cgo linux LDFLAGS: -L /usr/lib/nvidia-410/
-// #cgo CFLAGS: -I/usr/local/cuda/include
-// #cgo CFLAGS: -I/usr/local/cuda-9.2/include
-// #cgo CFLAGS: -I/usr/local/cuda-9.1/include
-// #cgo CFLAGS: -I/usr/local/cuda-9.0/include
+// #cgo linux LDFLAGS: -L /usr/local/cuda/lib64/stubs/
+// #cgo CFLAGS: -I/usr/local/cuda/include  -I/usr/local/cuda/targets/x86_64-linux/include
+// #cgo CFLAGS: -I/usr/local/cuda-10.0/include -I/usr/local/cuda-10.0/targets/x86_64-linux/include
+// #cgo CFLAGS: -I/usr/local/cuda-9.2/include -I/usr/local/cuda-9.2/targets/x86_64-linux/include
+// #cgo CFLAGS: -I/usr/local/cuda-9.1/include -I/usr/local/cuda-9.1/targets/x86_64-linux/include
+// #cgo CFLAGS: -I/usr/local/cuda-9.0/include -I/usr/local/cuda-9.0/targets/x86_64-linux/include
 // #cgo CFLAGS: -I${SRCDIR}
 // #include <stdio.h>
 // #include <stdlib.h>
